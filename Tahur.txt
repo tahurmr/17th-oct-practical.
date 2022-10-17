@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+class vehicle
+{
+	public:
+		void displayvehicle()
+		{
+			cout<<"four wheeler\n";
+			cout<<"six wheeler\n";
+			cout<<"two wheeler\n";
+		}
+};
+class bike:public vehicle
+{
+	public:
+		void displaybike()
+		{
+			cout<<"two wheeler\n";
+		}
+};
+class car:public bike
+{
+	public:
+		void displaycar()
+		{
+			cout<<"four wheeler car\n";
+		}
+};
+class bus:public car
+{
+	public:
+		void displaybus()
+		{
+			cout<<"six wheeler";
+		}
+};
+
+int main()
+{
+	bus b;
+	b.displayvehicle();
+	b.displaybike();
+	b.displaycar();
+	b.displaybus();
+	return 0;
+}
